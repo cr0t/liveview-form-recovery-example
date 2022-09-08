@@ -1,0 +1,23 @@
+<h1>Form Recovery Example</h1>
+
+<%= live_component(MyFormComponent, id: :my_form, query: @query) %>
+
+<pre>
+## Instructions
+
+Open browser console and run:
+
+liveSocket.disconnect()
+liveSocket.connect()
+
+In the Phoenix server logs you can see that after re-connection, we get "suggest" event,
+with only one form field value.
+
+## Details
+
+If we remove `phx-change` attr from the `form`, we won't receive this event at all.
+Same happens when we move `phx-change` attr to the `query` field itself.
+
+For some reason, during form recovery it sends only first child element's value that has
+`phx-change` attr set.
+</pre>

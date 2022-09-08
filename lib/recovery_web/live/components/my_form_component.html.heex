@@ -1,0 +1,15 @@
+<form phx-target={@myself} phx-change="suggest">
+  <input
+    type="text" name="other"
+    placeholder="Only my value will be sent on form recovery, because I have phx-change attr and I am first..."
+    phx-change="other_action"
+  />
+
+  <input
+    type="text" name="other_too"
+    placeholder="My value won't be sent on recovery, despite that I also have phx-change attr..."
+    phx-change="other_action"
+  />
+
+  <input type="text" name="query" value={@query}/>
+</form>
