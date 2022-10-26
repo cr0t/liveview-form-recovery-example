@@ -18,8 +18,10 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Now you can open JavaScript console of your browser and run:
 
+```console
 liveSocket.disconnect()
 liveSocket.connect()
+```
 
 In the Phoenix server logs you can notice that after re-connection, we get "suggest" event,
 with only one form input field value (the top one).
